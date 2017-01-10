@@ -1,2 +1,9 @@
-node_modules
-bower_components
+node_modules/
+*node_modules/*
+
+bower_components/
+*bower_components/*
+
+public/css
+public/fonts
+public/js/all.js
