@@ -1,12 +1,14 @@
 var gulp = require('gulp'),     
-    sass = require('gulp-ruby-sass') 
-    notify = require("gulp-notify") 
-    bower = require('gulp-bower');
-
-var config = {
-     sassPath: './resources/sass',
-     bowerDir: './bower_components' 
-}
+    sass = require('gulp-sass') ,
+    notify = require("gulp-notify") ,
+    bower = require('gulp-bower'),
+    concat = require('gulp-concat'),
+    merge = require('merge-stream'),
+    config = {
+	     source: './src/',
+	     bowerDir: './bower_components/' ,
+		public: './public/'
+	};
 
 gulp.task('bower', function() { 
     return bower()
@@ -14,29 +16,40 @@ gulp.task('bower', function() { 
 });
 
 gulp.task('icons', function() { 
-    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
-        .pipe(gulp.dest('./public/fonts')); 
+    return gulp.src(config.bowerDir + 'font-awesome/fonts/**.*') 
+        .pipe(gulp.dest(config.public + 'fonts/font-awesome')); 
 });
 
-gulp.task('css', function() { 
-    return gulp.src(config.sassPath + '/style.scss')
-         .pipe(sass({
-             style: 'compressed',
-             loadPath: [
-                 './resources/sass',
-                 config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
-                 config.bowerDir + '/fontawesome/scss',
-             ]
-         }) 
-            .on("error", notify.onError(function (error) {
-                 return "Error: " + error.message;
-             }))) 
-         .pipe(gulp.dest('./public/css')); 
+gulp.task('sass', function () {
+	var cssComp = gulp
+		.src([
+			config.bowerDir + 'animate.css/animate.css',
+			config.bowerDir + 'swiper/dist/css/swiper.css'
+		]);
+
+	var sassComp = gulp.src(config.source + 'sass/styles.scss')
+		.pipe(sass().on('error', sass.logError));
+
+	//.pipe(gulp.dest(config.public + 'css'))
+	return merge(cssComp, sassComp)
+		.pipe(concat('styles.css'))
+		.pipe(gulp.dest(config.public + 'css'));
+});
+
+gulp.task('js', function () {
+	return gulp
+		.src([
+			config.bowerDir + 'jquery/dist/jquery.js',
+			config.bowerDir + 'bootstrap-sass/assets/javascripts/_bootstrap.js'
+		])
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(config.public + 'js'));
 });
 
 // Rerun the task when a file changes
  gulp.task('watch', function() {
-     gulp.watch(config.sassPath + '/**/*.scss', ['css']); 
+     gulp.watch(config.source + 'sass/**/*.scss', ['sass']); 
+     gulp.watch(config.source + 'js/**/*.js', ['js']); 
 });
 
-  gulp.task('default', ['bower', 'icons', 'css']);
+  gulp.task('default', ['js', 'icons', 'sass']);
