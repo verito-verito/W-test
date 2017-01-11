@@ -40,7 +40,7 @@ gulp.task('js', function () {
 	return gulp
 		.src([
 			config.bowerDir + 'jquery/dist/jquery.js',
-			config.bowerDir + 'bootstrap-sass/assets/javascripts/_bootstrap.js'
+			config.bowerDir + 'bootstrap-sass/assets/javascripts/bootstrap.js'
 		])
         .pipe(concat('all.js'))
         .pipe(gulp.dest(config.public + 'js'));

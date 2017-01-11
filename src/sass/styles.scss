@@ -1,7 +1,16 @@
 
 // Bootstrap
+@import "_bootstrap_variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
 // Font Awesome
 $fa-font-path: "../fonts/font-awesome";
 @import "../../bower_components/font-awesome/scss/font-awesome";
+
+// Modules and Variables
+@import 'partials/_base';
+
+// Partials
+@import "partials/_responsive";
+@import "partials/_fonts";
+@import "partials/_main";
