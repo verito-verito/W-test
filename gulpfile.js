@@ -45,6 +45,7 @@ gulp.task('js', function () {
 			config.source + 'js/swiper.js',
 			config.bowerDir + 'wow/dist/wow.min.js',
 			config.source + 'js/wow.js',
+			config.source + 'js/nav-bar.js'
 		])
         .pipe(concat('all.js'))
         .pipe(gulp.dest(config.public + 'js'));
