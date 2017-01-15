@@ -4,31 +4,33 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Winclap test</title>
-	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Catamaran">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script type="text/javascript" src="./js/all.js"></script>
 </head>
 <body>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
+	        <span class="icon-bar icon-right"></span>
+	        <span class="icon-bar icon-none"></span>
+	        <span class="icon-bar icon-left"></span>
 	      </button>
-	      <h1 class="navbar-brand logo_winclap hidden-xs" href="#">Winclap</a>
+	      <h1 class="navbar-brand logo_winclap" href="#">Winclap</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li><a href="#">Rewards<span class="sr-only">(current)</span></a></li>
-	        <li><a href="#">Performance</a></li>
-	        <li><a href="#">Video</a></li>
+	        <li><a href="#Rewards">Rewards<span class="sr-only">(current)</span></a></li>
+	        <li><a href="#Performance">Performance</a></li>
+	        <li><a href="#Video">Video</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#">Log In / Sign Up</a></li>
@@ -36,7 +38,143 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	<!-- Swiper -->
+	<section class="swiper-container main-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="container">
+            		<h2>Rewards</h2>
+	            	<p>Real life rewards to</p>
+	            	<p>Promote apps</p>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="container">
+	            	<h2>Performance</h2>
+	            	<p>Thousands of campaigns</p>
+	            	<p>at your fingertips</p>
+	            </div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="container">
+	            	<h2>Video</h2>
+	            	<p>Nothing tells a story </p>
+	            	<p> like a video</p>
+	            </div>
+        	</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+	</section>
 
+	<section class="container section-cubo">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-12 wow flipInX cubo black" data-wow-delay="0.3s">
+				<h2>Innovate</h2>
+				<h2>Mobile Ad</h2>
+				<h2>Technology</h2>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInRight cubo purple" data-wow-delay="0.4s">
+				<i class="fa fa-line-chart"></i>
+				<h2>Performance</h2>
+				<p>Winclap campaign optimization algorithm combined with sophisticated targeting and budgeting capabilities.</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInRight cubo green" data-wow-delay="0.5s">
+				<i class="fa fa-pie-chart"></i>
+				<h2>Programmatic</h2>
+				<p>Scalable programmatic media buying to reach the right audience at the right time across more than 10 billion mobile bid opportunities daily.</p>
+			</div> 
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInRight cubo lightblue" data-wow-delay="0.6s">
+				<i class="fa fa-bullseye"></i>
+				<h2>Audience</h2>
+				<p>Advanced DMP for precise targeting and media buying.</p>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInLeft cubo cyan" data-wow-delay="1s">
+				<i class="fa fa-laptop"></i>
+				<h2>Mediation</h2>
+				<p>Auto-optimization engine to allocate inventory to verified third-party networks.</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInLeft cubo red" data-wow-delay="0.9s">
+				<i class="fa fa-link"></i>
+				<h2>Control</h2>
+				<p>Advanced reporting dashboard and ad quality controls.</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInLeft cubo orange" data-wow-delay="0.8s">
+				<i class="fa fa-external-link"></i>
+				<h2>Ad Serving</h2>
+				<p>Manage your direct sold campaigns, ad networks and other demand partners through a single interface.</p>
+			</div> 
+			<div class="col-md-3 col-sm-6 col-xs-12 wow bounceInLeft cubo purple" data-wow-delay="0.7s">
+				<i class="fa fa-expand"></i>
+				<h2>Scale</h2>
+				<p>Connect to the leading media properties and gain access to more than 70 ad exchanges, SSPs and high-impact media across multiple channels.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container data">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 wow fadeIn img-cubo1" data-wow-delay="0.5s"></div>
+			<div class="col-md-6 col-sm-6 col-xs-12 data-space">
+				<i class="fa fa-gift data-i"></i>
+				<a name="Rewards"><h2>Rewards</h2></a>
+				<p>Real life rewards to PROMOTE APPS, PROMOTE SALES and ENGAGE USERS.</p>
+				<p>We deliver real-life rewards in cherry-picked games and apps using top-notch DSP technology. And users love it.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 wow fadeIn img-cubo2 exchange-left" data-wow-delay="0.6s"></div>
+			<div class="col-md-6 col-sm-6 col-xs-12 data-space exchange-right">
+				<i class="fa fa-download data-i"></i>
+				<a name="Performance"><h2>Performance</h2></a>
+				<p>The world’s most powerful CPI Self Serve platform</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 wow fadeIn img-cubo3" data-wow-delay="0.7s"></div>
+			<div class="col-md-6 col-sm-6 col-xs-12 data-space">
+				<i class="fa fa-film data-i"></i>
+				<a name="Video"><h2>Video</h2></a>
+				<p>Nothing tells a story like a video.</p>
+				<p>Engage users with the no1 Ad Format.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container row">
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h3>Winclap</h3>
+				<ul>
+					<li>Rewards</li>
+					<li>Performance</li>
+					<li>Video</li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h3>About us</h3>
+				<ul>
+					<li>About</li>
+					<li>Blog</li>
+					<li>Terms and Conditions</li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h3>BRANCH OFFICES</h3>
+				<ul>
+					<li>HQ Buenos Aires</li>
+					<li>Córdoba</li>
+					<li>London</li>
+					<li>Bangkok</li>
+				</ul>
+			</div> 
+		</div>
+	</footer>
 </body>
 </html>

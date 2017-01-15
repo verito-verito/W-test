@@ -40,7 +40,11 @@ gulp.task('js', function () {
 	return gulp
 		.src([
 			config.bowerDir + 'jquery/dist/jquery.js',
-			config.bowerDir + 'bootstrap-sass/assets/javascripts/bootstrap.js'
+			config.bowerDir + 'bootstrap-sass/assets/javascripts/bootstrap.js',
+			config.bowerDir + 'swiper/dist/js/swiper.js',
+			config.source + 'js/swiper.js',
+			config.bowerDir + 'wow/dist/wow.min.js',
+			config.source + 'js/wow.js',
 		])
         .pipe(concat('all.js'))
         .pipe(gulp.dest(config.public + 'js'));

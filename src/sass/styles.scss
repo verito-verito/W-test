@@ -11,6 +11,11 @@ $fa-font-path: "../fonts/font-awesome";
 @import 'partials/_base';
 
 // Partials
-@import "partials/_responsive";
 @import "partials/_fonts";
 @import "partials/_main";
+
+//Responsive
+@import "partials/_responsive";
+
+
+

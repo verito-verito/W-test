@@ -29,7 +29,7 @@
 // //** Background color for `<body>`.
 // $body-bg:               #fff !default;
 // //** Global text color on `<body>`.
-$text-color:            #393939;
+$text-color:            #fff;
 
 // //** Global textual link color.
 // $link-color:            $brand-primary !default;
@@ -43,7 +43,7 @@ $text-color:            #393939;
 // //
 // //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  'Catamaran', sans-serif;
+$font-family-sans-serif:  Catamaran, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 // //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -66,8 +66,8 @@ $font-size-base:          17px;
 // $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 // //** By default, this inherits from the `<body>`.
-// $headings-font-family:    inherit !default;
-// $headings-font-weight:    500 !default;
+$headings-font-family:    Oswald, sans-serif;
+$headings-font-weight:    400;
 // $headings-line-height:    1.1 !default;
 // $headings-color:          inherit !default;
 
@@ -363,8 +363,8 @@ $font-size-base:          17px;
 
 // // Basics of a navbar
 $navbar-height:                    73px;
-// $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             0px;
+$navbar-margin-bottom:             0;
+$navbar-border-radius:             0;
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 // $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 // $navbar-collapse-max-height:       340px !default;
@@ -388,10 +388,9 @@ $navbar-default-link-active-color:         $navbar-default-link-color;
 // $navbar-default-brand-hover-bg:            transparent !default;
 
 // // Navbar toggle
-// $navbar-default-toggle-hover-bg:           #ddd !default;
-// $navbar-default-toggle-icon-bar-bg:        #888 !default;
-// $navbar-default-toggle-border-color:       #ddd !default;
-
+$navbar-default-toggle-hover-bg:              transparent;
+$navbar-default-toggle-icon-bar-bg:           #fff;
+$navbar-default-toggle-border-color:          transparent;
 
 // //=== Inverted navbar
 // // Reset inverted navbar basics
